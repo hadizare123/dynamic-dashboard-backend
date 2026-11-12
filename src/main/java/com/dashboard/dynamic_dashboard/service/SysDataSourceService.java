@@ -30,7 +30,7 @@ public class SysDataSourceService {
     }
 
     // پیدا کردن با ID
-    public Optional<SysDataSource> getById(Long id) {
+    public Optional<SysDataSource> getById(int id) {
         return repository.findById(id);
     }
 
@@ -47,7 +47,7 @@ public class SysDataSourceService {
 
     // حذف دیتاسورس
     @Transactional
-    public void delete(Long id) {
+    public void delete(int id) {
         repository.deleteById(id);
     }
 

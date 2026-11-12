@@ -8,11 +8,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface SysDataSourceRepository extends JpaRepository<SysDataSource, Long> {
+public interface SysDataSourceRepository extends JpaRepository<SysDataSource, Integer> {
 
     // پیدا کردن دیتاسورس بر اساس نام یونیک کد سیستم
     Optional<SysDataSource> findByCode(String code);
 
     // پیدا کردن تمام دیتاسورس‌های فعال (مثلا اوراکل پرسنلی، پستگرس و ...)
     List<SysDataSource> findByIsActiveTrue();
+
+
 }

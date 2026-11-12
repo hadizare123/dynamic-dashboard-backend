@@ -45,7 +45,7 @@ public class SysDataSourceController {
 
     // حذف
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable int id) {
         service.delete(id);
     }
 }
